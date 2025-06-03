@@ -1,0 +1,25 @@
+qt_add_qml_module(appQML_Guide1
+    URI "Main"
+    VERSION 1.0
+    NO_PLUGIN
+    QML_FILES Main.qml
+)
+
+add_subdirectory(mainui)
+add_subdirectory(apps)
+add_subdirectory(imports)
+add_subdirectory(styles)
+
+target_link_libraries(appQML_Guide1 PRIVATE
+    qdashboardstyleplugin
+    utilsplugin
+    controlsplugin
+    popupsplugin
+    calendarplugin
+    coursesplugin
+    inboxplugin
+    latestnewsplugin
+    webradioplugin
+    mainuiplugin
+    viewsplugin
+)
