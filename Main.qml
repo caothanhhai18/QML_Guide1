@@ -1,8 +1,26 @@
 import QtQuick
 
+import utils
+import popups
+import mainui
+
 Window {
-    width: 640
-    height: 480
+    id: root
     visible: true
-    title: qsTr("Hello World")
+    color: Style.bgColor
+    title: qsTr("QML Dashboard")
+    width: Style.screenWidth
+    height: Style.screenHeight
+
+    Item {
+        anchors.fill: parent
+        HomePage {
+            id: dashboardAppContent
+            anchors.fill: parent
+        }
+        //Popups
+        Popups {
+            id: popups
+        }
+    }
 }

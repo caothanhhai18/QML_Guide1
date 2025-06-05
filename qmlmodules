@@ -5,13 +5,13 @@ qt_add_qml_module(appQML_Guide1
     QML_FILES Main.qml
 )
 
-add_subdirectory(mainui)
-add_subdirectory(apps)
-add_subdirectory(imports)
 add_subdirectory(styles)
+add_subdirectory(imports)
+add_subdirectory(apps)
+add_subdirectory(mainui)
 
 target_link_libraries(appQML_Guide1 PRIVATE
-    qdashboardstyleplugin
+    gui1styleplugin
     utilsplugin
     controlsplugin
     popupsplugin
