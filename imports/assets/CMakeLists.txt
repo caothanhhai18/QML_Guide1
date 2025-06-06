@@ -1,4 +1,4 @@
-qt_add_resources(QDashboardApp "assets"
+qt_add_resources(appQML_Guide1 "assets"
     PREFIX "/assets"
     FILES
         icons/left.png
