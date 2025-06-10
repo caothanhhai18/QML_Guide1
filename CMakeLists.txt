@@ -8,9 +8,22 @@ find_package(Qt6 REQUIRED COMPONENTS Core5Compat  Quick QuickControls2)
 
 qt_standard_project_setup(REQUIRES 6.5)
 
+set(QML_IMPORT_PATH ${CMAKE_SOURCE_DIR}/qml ${CMAKE_BINARY_DIR}/imports CACHE STRING "" FORCE)
+
 qt_add_executable(appQML_Guide1
     main.cpp
+    import_qml_plugins.h
+    qtquickcontrols2.conf Readme.txt
+    app_environment.h
+
 )
+
+qt_add_resources(appQML_Guide1 "configuration"
+    PREFIX "/"
+    FILES
+        qtquickcontrols2.conf
+)
+
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
